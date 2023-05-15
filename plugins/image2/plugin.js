@@ -30,7 +30,7 @@
 					// This is to remove unwanted space so resize
 					// wrapper is displayed property.
 					//TODO
-					"line-height:10px" +
+					"line-height:0" +
 					"}" +
 					".cke_editable.cke_image_sw, .cke_editable.cke_image_sw *{cursor:sw-resize !important}" +
 					".cke_editable.cke_image_se, .cke_editable.cke_image_se *{cursor:se-resize !important}" +
@@ -1089,8 +1089,12 @@
 						attrsHolder.addClass(
 							alignClasses[alignmentsObj[align]]
 						);
-					else console.log("I see");
-					// styles[ 'float' ] = align;
+					else
+					styles[ 'float' ] = align;
+					
+					if (align === 'left') {
+						styles[ 'margin-right' ] = "25px";
+					}
 				}
 
 				// Update element styles.
