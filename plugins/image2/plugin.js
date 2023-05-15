@@ -1090,8 +1090,7 @@
 							alignClasses[alignmentsObj[align]]
 						);
 					else {
-					styles[ 'float' ] = align;
-					styles[ 'margin-right' ] = '25px';
+					// styles[ 'float' ] = align;
 					}
 				}
 
