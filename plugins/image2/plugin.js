@@ -29,7 +29,7 @@
 				".cke_image_nocaption{" +
 					// This is to remove unwanted space so resize
 					// wrapper is displayed property.
-					//TODO
+					//TODO123
 					"line-height:10px" +
 					"}" +
 					".cke_editable.cke_image_sw, .cke_editable.cke_image_sw *{cursor:sw-resize !important}" +
