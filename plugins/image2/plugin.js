@@ -1089,11 +1089,9 @@
 						attrsHolder.addClass(
 							alignClasses[alignmentsObj[align]]
 						);
-					else
+					else {
 					styles[ 'float' ] = align;
-					
-					if (align === 'left') {
-						styles[ 'margin-right' ] = "25px";
+					styles[ 'margin-right' ] = '25px';
 					}
 				}
 
