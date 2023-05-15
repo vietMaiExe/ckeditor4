@@ -1089,8 +1089,8 @@
 						attrsHolder.addClass(
 							alignClasses[alignmentsObj[align]]
 						);
-					else
-					styles[ 'float' ] = align;
+					else {}
+					// styles[ 'float' ] = align;
 				}
 
 				// Update element styles.
