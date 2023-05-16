@@ -1092,7 +1092,10 @@
 						attrsHolder.addClass(
 							alignClasses[alignmentsObj[align]]
 						);
-					else styles["float"] = align;
+					else {
+						styles["float"] = align;
+						styles["margin-right"] = "25px";
+					}
 				}
 
 				// Update element styles.
