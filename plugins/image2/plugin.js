@@ -1094,7 +1094,7 @@
 						);
 					else {
 						styles["float"] = align;
-						styles["margin-right"] = "25px";
+						styles["margin-right"] = "30px";
 					}
 				}
 
