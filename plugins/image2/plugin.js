@@ -30,7 +30,7 @@
 					// This is to remove unwanted space so resize
 					// wrapper is displayed property.
 					//TODO123
-					"line-height:0" +
+					"line-height:10px" +
 					"}" +
 					".cke_editable.cke_image_sw, .cke_editable.cke_image_sw *{cursor:sw-resize !important}" +
 					".cke_editable.cke_image_se, .cke_editable.cke_image_se *{cursor:se-resize !important}" +
@@ -1090,8 +1090,8 @@
 							alignClasses[alignmentsObj[align]]
 						);
 					else {
-						styles["float"] = align;
 						styles["margin-right"] = "25px";
+						// styles["float"] = align;
 					}
 				}
 
