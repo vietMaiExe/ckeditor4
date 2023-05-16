@@ -29,7 +29,7 @@
 				".cke_image_nocaption{" +
 					// This is to remove unwanted space so resize
 					// wrapper is displayed property.
-					//TODO1234
+					//TODO123
 					"line-height:0" +
 					"}" +
 					".cke_editable.cke_image_sw, .cke_editable.cke_image_sw *{cursor:sw-resize !important}" +
@@ -424,26 +424,26 @@
 					var alignElement = data.hasCaption ? this.element : image;
 
 					// Read the initial left/right alignment from the class set on element.
-					// if (alignClasses) {
-					// 	if (alignElement.hasClass(alignClasses[0])) {
-					// 		data.align = "left";
-					// 	} else if (alignElement.hasClass(alignClasses[2])) {
-					// 		data.align = "right";
-					// 	}
+					if (alignClasses) {
+						if (alignElement.hasClass(alignClasses[0])) {
+							data.align = "left";
+						} else if (alignElement.hasClass(alignClasses[2])) {
+							data.align = "right";
+						}
 
-					// 	if (data.align) {
-					// 		alignElement.removeClass(
-					// 			alignClasses[alignmentsObj[data.align]]
-					// 		);
-					// 	} else {
-					// 		data.align = "none";
-					// 	}
-					// }
+						if (data.align) {
+							alignElement.removeClass(
+								alignClasses[alignmentsObj[data.align]]
+							);
+						} else {
+							data.align = "none";
+						}
+					}
 					// Read initial float style from figure/image and then remove it.
-					// else {
-					// 	data.align = alignElement.getStyle("float") || "none";
-					// 	alignElement.removeStyle("float");
-					// }
+					else {
+						data.align = alignElement.getStyle("float") || "none";
+						alignElement.removeStyle("float");
+					}
 				}
 
 				// Update data.link object with attributes if the link has been discovered.
@@ -936,13 +936,18 @@
 			}
 		} else {
 			if (align == "center") {
-				// if (hasCaption) wrapper.setStyle("text-align", "center");
-				// else wrapper.removeStyle("text-align");
-				// wrapper.removeStyle("float");
+				if (hasCaption) wrapper.setStyle("text-align", "center");
+				else wrapper.removeStyle("text-align");
+
+				wrapper.removeStyle("float");
 			} else {
-				// if (align == "none") wrapper.removeStyle("float");
-				// else wrapper.setStyle("float", align);
-				// wrapper.removeStyle("text-align");
+				if (align == "none") wrapper.removeStyle("float");
+				else {
+					wrapper.setStyle("float", align);
+					wrapper.setStyle("margin-right", "25px");
+				}
+
+				wrapper.removeStyle("text-align");
 			}
 		}
 	}
@@ -1082,17 +1087,17 @@
 				}
 
 				// If left/right, add float style to the downcasted element.
-				// else if (align in { left: 1, right: 1 }) {
-				// 	if (alignClasses)
-				// 		attrsHolder.addClass(
-				// 			alignClasses[alignmentsObj[align]]
-				// 		);
-				// 	else styles["float"] = align;
-				// }
+				else if (align in { left: 1, right: 1 }) {
+					if (alignClasses)
+						attrsHolder.addClass(
+							alignClasses[alignmentsObj[align]]
+						);
+					else styles["float"] = align;
+				}
 
-				// // Update element styles.
-				// if (!alignClasses && !CKEDITOR.tools.isEmpty(styles))
-				// 	attrs.style = CKEDITOR.tools.writeCssText(styles);
+				// Update element styles.
+				if (!alignClasses && !CKEDITOR.tools.isEmpty(styles))
+					attrs.style = CKEDITOR.tools.writeCssText(styles);
 			}
 
 			return el;
