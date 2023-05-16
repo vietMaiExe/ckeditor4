@@ -29,7 +29,7 @@
 				".cke_image_nocaption{" +
 					// This is to remove unwanted space so resize
 					// wrapper is displayed property.
-					//TODO123
+					//TODO1234
 					"line-height:0" +
 					"}" +
 					".cke_editable.cke_image_sw, .cke_editable.cke_image_sw *{cursor:sw-resize !important}" +
@@ -424,26 +424,26 @@
 					var alignElement = data.hasCaption ? this.element : image;
 
 					// Read the initial left/right alignment from the class set on element.
-					if (alignClasses) {
-						if (alignElement.hasClass(alignClasses[0])) {
-							data.align = "left";
-						} else if (alignElement.hasClass(alignClasses[2])) {
-							data.align = "right";
-						}
+					// if (alignClasses) {
+					// 	if (alignElement.hasClass(alignClasses[0])) {
+					// 		data.align = "left";
+					// 	} else if (alignElement.hasClass(alignClasses[2])) {
+					// 		data.align = "right";
+					// 	}
 
-						if (data.align) {
-							alignElement.removeClass(
-								alignClasses[alignmentsObj[data.align]]
-							);
-						} else {
-							data.align = "none";
-						}
-					}
+					// 	if (data.align) {
+					// 		alignElement.removeClass(
+					// 			alignClasses[alignmentsObj[data.align]]
+					// 		);
+					// 	} else {
+					// 		data.align = "none";
+					// 	}
+					// }
 					// Read initial float style from figure/image and then remove it.
-					else {
-						data.align = alignElement.getStyle("float") || "none";
-						alignElement.removeStyle("float");
-					}
+					// else {
+					// 	data.align = alignElement.getStyle("float") || "none";
+					// 	alignElement.removeStyle("float");
+					// }
 				}
 
 				// Update data.link object with attributes if the link has been discovered.
