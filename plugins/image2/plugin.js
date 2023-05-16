@@ -30,7 +30,7 @@
 					// This is to remove unwanted space so resize
 					// wrapper is displayed property.
 					//TODO123
-					"line-height:10px" +
+					"line-height:0" +
 					"}" +
 					".cke_editable.cke_image_sw, .cke_editable.cke_image_sw *{cursor:sw-resize !important}" +
 					".cke_editable.cke_image_se, .cke_editable.cke_image_se *{cursor:se-resize !important}" +
@@ -1084,20 +1084,17 @@
 				}
 
 				// If left/right, add float style to the downcasted element.
-				else if (align in { left: 1, right: 1 }) {
-					if (alignClasses)
-						attrsHolder.addClass(
-							alignClasses[alignmentsObj[align]]
-						);
-					else {
-						styles["margin-right"] = "25px";
-						// styles["float"] = align;
-					}
-				}
+				// else if (align in { left: 1, right: 1 }) {
+				// 	if (alignClasses)
+				// 		attrsHolder.addClass(
+				// 			alignClasses[alignmentsObj[align]]
+				// 		);
+				// 	else styles["float"] = align;
+				// }
 
-				// Update element styles.
-				if (!alignClasses && !CKEDITOR.tools.isEmpty(styles))
-					attrs.style = CKEDITOR.tools.writeCssText(styles);
+				// // Update element styles.
+				// if (!alignClasses && !CKEDITOR.tools.isEmpty(styles))
+				// 	attrs.style = CKEDITOR.tools.writeCssText(styles);
 			}
 
 			return el;
