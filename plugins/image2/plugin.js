@@ -936,15 +936,13 @@
 			}
 		} else {
 			if (align == "center") {
-				if (hasCaption) wrapper.setStyle("text-align", "center");
-				else wrapper.removeStyle("text-align");
-
-				wrapper.removeStyle("float");
+				// if (hasCaption) wrapper.setStyle("text-align", "center");
+				// else wrapper.removeStyle("text-align");
+				// wrapper.removeStyle("float");
 			} else {
-				if (align == "none") wrapper.removeStyle("float");
-				else wrapper.setStyle("float", align);
-
-				wrapper.removeStyle("text-align");
+				// if (align == "none") wrapper.removeStyle("float");
+				// else wrapper.setStyle("float", align);
+				// wrapper.removeStyle("text-align");
 			}
 		}
 	}
