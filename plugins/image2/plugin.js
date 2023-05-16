@@ -941,10 +941,8 @@
 				wrapper.removeStyle("float");
 			} else {
 				if (align == "none") wrapper.removeStyle("float");
-				else {
-					wrapper.setStyle("float", align);
-					wrapper.setStyle("margin-right", "25px");
-				}
+				else wrapper.setStyle("float", align);
+
 				wrapper.removeStyle("text-align");
 			}
 		}
@@ -1090,10 +1088,7 @@
 						attrsHolder.addClass(
 							alignClasses[alignmentsObj[align]]
 						);
-					else {
-						styles["float"] = align;
-						styles["margin-right"] = "35px";
-					}
+					else styles["float"] = align;
 				}
 
 				// Update element styles.
